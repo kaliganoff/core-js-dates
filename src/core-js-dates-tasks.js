@@ -215,7 +215,7 @@ function getWeekNumberByDate(/* date */) {
  */
 function getNextFridayThe13th(date) {
   const day = date;
-  while (true) {
+  for (let i = 1; i < 36; i += 1) {
     day.setDate(13);
 
     if (day.getDay() === 5) {
@@ -223,6 +223,7 @@ function getNextFridayThe13th(date) {
     }
     day.setMonth(day.getMonth() + 1);
   }
+  return day;
 }
 
 /**
